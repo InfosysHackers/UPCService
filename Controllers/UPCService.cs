@@ -17,7 +17,7 @@ namespace PlnogramService.Controllers
         [HttpGet("GetPlanograms/{UPCNbr}", Name = "GetPlanograms")]
         public async Task<string> GetPlanograms(int UPCNbr)
         {
-            string baseUri = "http://52.176.48.248:8000/api/getplanograms/" + UPCNbr + "/" + UPCNbr;
+            string baseUri = "http://52.176.48.248:8000/api/GetPlanogramsOnUPC/" + UPCNbr;
             using (var client = new HttpClient())
             {
                 using (var r = await client.GetAsync(baseUri))

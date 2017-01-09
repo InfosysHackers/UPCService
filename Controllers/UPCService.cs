@@ -14,24 +14,10 @@ namespace PlnogramService.Controllers
     public class ValuesController : Controller
 
     {
-        [HttpGet("GetDepartment/{id}", Name = "GetDepartment")]
-        public async Task<string> GetDepartment(int id)
+        [HttpGet("GetPlanograms/{UPCNbr}", Name = "GetPlanograms")]
+        public async Task<string> GetPlanograms(int UPCNbr)
         {
-            string baseUri = "http://52.176.48.248:8000/api/getdepartment/" + id;
-            using (var client = new HttpClient())
-            {
-                using (var r = await client.GetAsync(baseUri))
-                {
-                    string result = await r.Content.ReadAsStringAsync();
-                    return result;
-                }
-            }
-        }
-
-        [HttpGet("GetPlanograms/{storeNbr}/{DeptNbr}", Name = "GetPlanograms")]
-        public async Task<string> GetPlanograms(int storeNbr,int DeptNbr)
-        {
-            string baseUri = "http://52.176.48.248:8000/api/getplanograms/" + storeNbr +"/" + DeptNbr;
+            string baseUri = "http://52.176.48.248:8000/api/getplanograms/" + UPCNbr + "/" + UPCNbr;
             using (var client = new HttpClient())
             {
                 using (var r = await client.GetAsync(baseUri))

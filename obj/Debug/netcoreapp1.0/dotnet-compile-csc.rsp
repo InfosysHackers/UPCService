@@ -169,4 +169,4 @@
 -resource:"D:\workspace\UPCService\obj\Debug\netcoreapp1.0\UPCServicedotnet-compile.deps.json",UPCService.deps.json
 "D:\workspace\UPCService\Program.cs"
 "D:\workspace\UPCService\Startup.cs"
-"D:\workspace\UPCService\Controllers\ValuesController.cs"
+"D:\workspace\UPCService\Controllers\UPCService.cs"

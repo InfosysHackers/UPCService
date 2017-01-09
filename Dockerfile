@@ -5,7 +5,7 @@ WORKDIR /app
 RUN ["dotnet", "restore"]
 RUN ["dotnet", "build"]
 
-ENV ASPNETCORE_URLS http://*:4001
+ENV ASPNETCORE_URLS http://*:6001
 EXPOSE 4001/tcp
 
 ENTRYPOINT ["dotnet", "run"]
